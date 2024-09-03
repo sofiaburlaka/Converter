@@ -6,13 +6,20 @@ public class Main {
 
     public static void main(String[] args) {
         System.out.println("App for measures converting");
+        System.out.println("Version 1.0");
 
         double kgs = 5;
+        double pnds = 12;
         double pounds = convKgstoPounds(kgs);
-        System.out.println("Result is" + pounds + "pounds");
+        double kilos = convPoundstoKgs(pnds);
+        System.out.println("Result is" + pounds + "pounds and " + kilos + "kilograms");
     }
 
     private static double convKgstoPounds(double kgs) {
         return kgs * CONV_K;
     }
+    private static double convPoundstoKgs(double pnds) {
+        return pnds / CONV_K;
+    }
+
 }
